@@ -15,7 +15,7 @@ int main() {
     vector<bool> dp(sum+1,false);
     dp[0] = true;
     for(ll j=0;j<n;j++){
-        for(ll i=0;i<=sum;i++){
+        for(ll i=sum;i>=0;i--){
             if(i>=a[j]){
                 dp[i] = dp[i]||dp[i-a[j]];
             }
